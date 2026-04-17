@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Build & Production
+dist/
+build/
+*.min.css
+*.min.js
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+~*

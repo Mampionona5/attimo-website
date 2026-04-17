@@ -1,0 +1,32 @@
+{
+  "name": "attimo-website",
+  "version": "1.0.0",
+  "description": "Site web vitrine pour Attimo - Espace d'ateliers créatifs à Mahajanga, Madagascar",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "git push origin main"
+  },
+  "keywords": [
+    "ateliers créatifs",
+    "Mahajanga",
+    "Madagascar",
+    "création",
+    "dessin",
+    "crochet",
+    "poterie"
+  ],
+  "author": "Mampionona",
+  "license": "All Rights Reserved",
+  "dependencies": {
+    "gsap": "^3.12.2",
+    "Note": "GSAP is loaded from CDN in HTML files, not via npm"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mampionona/attimo-website.git"
+  },
+  "private": true
+}
