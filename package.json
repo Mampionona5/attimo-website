@@ -19,10 +19,7 @@
   ],
   "author": "Mampionona",
   "license": "All Rights Reserved",
-  "dependencies": {
-    "gsap": "^3.12.2",
-    "Note": "GSAP is loaded from CDN in HTML files, not via npm"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "repository": {
     "type": "git",
