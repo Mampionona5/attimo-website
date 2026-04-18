@@ -9,26 +9,39 @@
     <meta property="og:title" content="Galerie - Attimo">
     <meta property="og:description" content="Découvrez les moments créatifs d'Attimo : mains qui créent, ambiance chaleureuse, résultats magnifiques.">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="https://attimo-mada.com/galerie.html">
+    <meta property="og:url" content="https://attimo-mada.com/galerie">
+    <meta property="og:image" content="https://attimo-mada.com/assets/images/gallery-1.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Galerie Photos - Attimo">
+    <meta name="twitter:description" content="Decouvrez les creations, les ateliers et les moments partages de la communaute Attimo.">
+    <meta name="twitter:image" content="https://attimo-mada.com/assets/images/gallery-1.webp">
+    <link rel="canonical" href="https://attimo-mada.com/galerie">
     <title>Galerie Photos - Attimo | Nos Créations</title>
     <!-- GSAP & ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js" defer></script>
     <!-- Playfair Display Font -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navigation principale">
         <div class="container">
-            <div class="logo">attimo.</div>
-            <ul class="nav-menu">
+            <a href="index.html" class="logo" aria-label="Accueil Attimo">attimo.</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="concept.html">Concept</a></li>
                 <li><a href="ateliers.html">Ateliers</a></li>
-                <li><a href="galerie.html" class="active">Galerie</a></li>
+                <li><a href="galerie.html" class="active" aria-current="page">Galerie</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -42,7 +55,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- Section: Galerie photographique -->
         <section class="gallery">
             <div class="container">
@@ -50,27 +63,27 @@
                 
                 <div class="gallery-grid">
                     <figure class="gallery-item">
-                        <img src="assets/images/gallery-1.webp" alt="Atelier carterie, mains qui créent">
+                        <img src="assets/images/gallery-1.webp" alt="Atelier carterie, mains qui créent" width="1200" height="900" loading="lazy" decoding="async">
                         <figcaption>Atelier carterie - Les petits Pompoms au travail</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="assets/images/gallery-2.webp" alt="Créations finalisées">
+                        <img src="assets/images/gallery-2.webp" alt="Créations finalisées" width="1200" height="900" loading="lazy" decoding="async">
                         <figcaption>Les résultats de l'amour qu'on met dans nos mains</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="assets/images/gallery-3.webp" alt="Ambiance générale atelier">
+                        <img src="assets/images/gallery-3.webp" alt="Ambiance générale atelier" width="1200" height="900" loading="lazy" decoding="async">
                         <figcaption>Moment suspendu - l'essence d'attimo</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="assets/images/gallery-4.webp" alt="Ateliers dessin et peinture">
+                        <img src="assets/images/gallery-4.webp" alt="Ateliers dessin et peinture" width="1200" height="900" loading="lazy" decoding="async">
                         <figcaption>Aquarelle libre - la main qui suit le cœur</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="assets/images/gallery-5.webp" alt="Participants en train de créer">
+                        <img src="assets/images/gallery-5.webp" alt="Participants en train de créer" width="1200" height="900" loading="lazy" decoding="async">
                         <figcaption>Ensemble, on crée mieux</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="assets/images/gallery-6.webp" alt="Rendez-vous sous le manguier">
+                        <img src="assets/images/gallery-6.webp" alt="Rendez-vous sous le manguier" width="1200" height="900" loading="lazy" decoding="async">
                         <figcaption>Rendez-vous sous le manguier - notre événement vedette</figcaption>
                     </figure>
                 </div>
@@ -101,8 +114,8 @@
         <!-- Section: CTA -->
         <section class="cta-final">
             <div class="container">
-                <h2>Tu aussi, tu pourrais être dans la galerie</h2>
-                <a href="ateliers.html" class="btn btn-primary">Rejoins un atelier</a>
+                <h2>Toi aussi, tu pourrais être dans la galerie</h2>
+                <a href="ateliers.html" class="btn btn-primary" data-track="cta_click" data-track-label="galerie_rejoins_un_atelier">Rejoins un atelier</a>
             </div>
         </section>
     </main>
@@ -143,6 +156,6 @@
         </div>
     </footer>
 
-    <script src="js/animations.js"></script>
+    <script src="js/animations.js" defer></script>
 </body>
 </html>

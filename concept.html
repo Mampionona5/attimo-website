@@ -9,24 +9,37 @@
     <meta property="og:title" content="Notre Histoire - Attimo">
     <meta property="og:description" content="La philosophie d'Attimo : créer ensemble, lentement, bienveillance, communauté.">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="https://attimo-mada.com/concept.html">
+    <meta property="og:url" content="https://attimo-mada.com/concept">
+    <meta property="og:image" content="https://attimo-mada.com/assets/images/hero-placeholder.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Notre Philosophie - Attimo">
+    <meta name="twitter:description" content="Découvrez la vision et les valeurs d'Attimo, espace créatif à Mahajanga.">
+    <meta name="twitter:image" content="https://attimo-mada.com/assets/images/hero-placeholder.webp">
+    <link rel="canonical" href="https://attimo-mada.com/concept">
     <title>Notre Philosophie - Attimo | Créativité à Mahajanga</title>
     <!-- GSAP & ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js" defer></script>
     <!-- Playfair Display Font -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navigation principale">
         <div class="container">
-            <div class="logo">attimo.</div>
-            <ul class="nav-menu">
+            <a href="index.html" class="logo" aria-label="Accueil Attimo">attimo.</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="concept.html" class="active">Concept</a></li>
+                <li><a href="concept.html" class="active" aria-current="page">Concept</a></li>
                 <li><a href="ateliers.html">Ateliers</a></li>
                 <li><a href="galerie.html">Galerie</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -42,7 +55,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- Section 1: Origines -->
         <section class="concept-section origins">
             <div class="container">
@@ -97,7 +110,7 @@
         <section class="cta-final">
             <div class="container">
                 <h2>Envie de faire partie de l'histoire ?</h2>
-                <a href="ateliers.html" class="btn btn-primary">Voir les ateliers</a>
+                <a href="ateliers.html" class="btn btn-primary" data-track="cta_click" data-track-label="concept_voir_les_ateliers">Voir les ateliers</a>
             </div>
         </section>
     </main>
@@ -138,6 +151,6 @@
         </div>
     </footer>
 
-    <script src="js/animations.js"></script>
+    <script src="js/animations.js" defer></script>
 </body>
 </html>

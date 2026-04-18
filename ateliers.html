@@ -9,25 +9,38 @@
     <meta property="og:title" content="Nos Ateliers - Attimo">
     <meta property="og:description" content="Ateliers d'aquarelle et carterie à Mahajanga. Créez ensemble dans une ambiance chaleureuse.">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="https://attimo-mada.com/ateliers.html">
+    <meta property="og:url" content="https://attimo-mada.com/ateliers">
+    <meta property="og:image" content="https://attimo-mada.com/assets/images/atelier-aquarelle.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ateliers Creatifs - Attimo">
+    <meta name="twitter:description" content="Reservez votre atelier creatif a Mahajanga: aquarelle, carterie et evenements signatures.">
+    <meta name="twitter:image" content="https://attimo-mada.com/assets/images/atelier-aquarelle.webp">
+    <link rel="canonical" href="https://attimo-mada.com/ateliers">
     <title>Ateliers Créatifs - Attimo | Réservez Votre Place</title>
     <!-- GSAP & ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js" defer></script>
     <!-- Playfair Display Font -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navigation principale">
         <div class="container">
-            <div class="logo">attimo.</div>
-            <ul class="nav-menu">
+            <a href="index.html" class="logo" aria-label="Accueil Attimo">attimo.</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="concept.html">Concept</a></li>
-                <li><a href="ateliers.html" class="active">Ateliers</a></li>
+                <li><a href="ateliers.html" class="active" aria-current="page">Ateliers</a></li>
                 <li><a href="galerie.html">Galerie</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -42,18 +55,18 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- Section 1: Types d'ateliers -->
         <section class="workshops-types">
             <div class="container">
                 <h2>Ce qu'on propose</h2>
                 <div class="workshops-grid-full">
-                    <article class="workshop-type-card">
+                    <article class="workshop-type-card" id="aquarelle">
                         <h3>🎨 Aquarelle & Dessin</h3>
                         <p>Laisser la main créer sans penser. Aquarelle, crayons, peinture pour tous les niveaux.</p>
                         <p class="workshop-details"><strong>Durée :</strong> 2h | <strong>Participants :</strong> 15-20</p>
                     </article>
-                    <article class="workshop-type-card">
+                    <article class="workshop-type-card" id="carterie">
                         <h3>✨ Carterie Créative</h3>
                         <p>Les mains qui créent des cartes trouvent la magie. Carterie peinte, collage, lettrage pour débutant.e.s et confirmé.e.s.</p>
                         <p class="workshop-details"><strong>Durée :</strong> 2h30 | <strong>Participants :</strong> 12</p>
@@ -86,7 +99,7 @@
                 <h2>Ateliers à venir</h2>
                 <div class="calendar-grid">
                     <article class="calendar-item">
-                        <img src="assets/images/atelier-aquarelle.webp" alt="Atelier aquarelle libre">
+                        <img src="assets/images/atelier-aquarelle.webp" alt="Atelier aquarelle libre" width="1200" height="900" loading="lazy" decoding="async">
                         <h3>Atelier Aquarelle Libre</h3>
                         <p><strong>Quand :</strong> 22 avril 2026, 14h-16h</p>
                         <p><strong>Lieu :</strong> Espace attimo, Mahajanga</p>
@@ -95,7 +108,7 @@
                         <a href="contact.html" class="btn btn-primary">Réserver</a>
                     </article>
                     <article class="calendar-item">
-                        <img src="assets/images/atelier-carterie.webp" alt="Atelier carterie créative">
+                        <img src="assets/images/atelier-carterie.webp" alt="Atelier carterie créative" width="1200" height="900" loading="lazy" decoding="async">
                         <h3>Carterie Créative</h3>
                         <p><strong>Quand :</strong> 25 avril 2026, 18h-20h30</p>
                         <p><strong>Lieu :</strong> Espace attimo, Mahajanga</p>
@@ -143,7 +156,7 @@
         <section class="cta-final">
             <div class="container">
                 <h2>Prête à créer ?</h2>
-                <a href="contact.html" class="btn btn-primary">Réserver maintenant</a>
+                <a href="contact.html" class="btn btn-primary" data-track="cta_click" data-track-label="ateliers_reserver_maintenant">Réserver maintenant</a>
             </div>
         </section>
     </main>
@@ -184,6 +197,6 @@
         </div>
     </footer>
 
-    <script src="js/animations.js"></script>
+    <script src="js/animations.js" defer></script>
 </body>
 </html>

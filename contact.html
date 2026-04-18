@@ -9,27 +9,40 @@
     <meta property="og:title" content="Contact - Attimo">
     <meta property="og:description" content="Rejoignez Attimo à Mahajanga. Réservez votre place, posez vos questions, créons ensemble.">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="https://attimo-mada.com/contact.html">
+    <meta property="og:url" content="https://attimo-mada.com/contact">
+    <meta property="og:image" content="https://attimo-mada.com/assets/images/map-placeholder.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact et Reservation - Attimo">
+    <meta name="twitter:description" content="Contactez Attimo a Mahajanga pour reserver un atelier creatif ou poser vos questions.">
+    <meta name="twitter:image" content="https://attimo-mada.com/assets/images/map-placeholder.webp">
+    <link rel="canonical" href="https://attimo-mada.com/contact">
     <title>Contact & Réservation - Attimo | Mahajanga</title>
     <!-- GSAP & ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js" defer></script>
     <!-- Playfair Display Font -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navigation principale">
         <div class="container">
-            <div class="logo">attimo.</div>
-            <ul class="nav-menu">
+            <a href="index.html" class="logo" aria-label="Accueil Attimo">attimo.</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="concept.html">Concept</a></li>
                 <li><a href="ateliers.html">Ateliers</a></li>
                 <li><a href="galerie.html">Galerie</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -42,7 +55,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- Section: Localisation -->
         <section class="location-section">
             <div class="container">
@@ -52,7 +65,7 @@
                         <h3>attimo - Espace de créativité</h3>
                         <address>
                             Mahajanga (Majunga), Madagascar<br>
-                            📍 [Rue/quartier exact à confirmer]
+                            📍 Adresse détaillée communiquée après réservation
                         </address>
                         <p>Notre espace vous accueille dans une atmosphère douce, avec tout le nécessaire pour créer tranquille.</p>
                         <p><strong>Horaires :</strong></p>
@@ -65,7 +78,7 @@
                     <div class="location-map">
                         <!-- Placeholder pour carte intégrée -->
                         <div class="map-placeholder">
-                            <img src="assets/images/map-placeholder.webp" alt="Localisation Attimo à Mahajanga, Madagascar">
+                            <img src="assets/images/map-placeholder.webp" alt="Localisation Attimo à Mahajanga, Madagascar" width="1200" height="900" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -76,7 +89,10 @@
         <section class="contact-form-section">
             <div class="container">
                 <h2>Contactez-nous</h2>
-                <form class="contact-form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+                <form class="contact-form" method="POST" action="https://formsubmit.co/contact@attimo-mada.com" data-track-form="contact_reservation">
+                    <input type="hidden" name="_subject" value="Nouvelle demande depuis attimo-mada.com">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
                     <div class="form-group">
                         <label for="name">Nom *</label>
                         <input type="text" id="name" name="name" required>
@@ -103,9 +119,9 @@
                             <option value="autre">Autre / Je ne sais pas encore</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                    <button type="submit" class="btn btn-primary" data-track="form_submit_click" data-track-label="contact_envoyer">Envoyer ma demande</button>
                 </form>
-                <p class="form-note">On te recontacte rapidement ✨</p>
+                <p class="form-note">Nous lisons chaque message avec attention.</p>
             </div>
         </section>
 
@@ -165,7 +181,7 @@
         <section class="cta-final">
             <div class="container">
                 <h2>Prête à devenir l'une de mes petits Pompoms ?</h2>
-                <a href="ateliers.html" class="btn btn-primary">Voir les ateliers</a>
+                <a href="ateliers.html" class="btn btn-primary" data-track="cta_click" data-track-label="contact_voir_les_ateliers">Voir les ateliers</a>
             </div>
         </section>
     </main>
@@ -206,6 +222,6 @@
         </div>
     </footer>
 
-    <script src="js/animations.js"></script>
+    <script src="js/animations.js" defer></script>
 </body>
 </html>

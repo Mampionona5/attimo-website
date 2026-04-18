@@ -10,23 +10,36 @@
     <meta property="og:description" content="Espace d'ateliers créatifs à Mahajanga. Créer ensemble, créer de ses mains. Douceur, créativité, fous rires.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
+    <meta property="og:url" content="https://attimo-mada.com/">
+    <meta property="og:image" content="https://attimo-mada.com/assets/images/hero-placeholder.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Attimo - Votre moment suspendu">
+    <meta name="twitter:description" content="Ateliers créatifs à Mahajanga: aquarelle, carterie, moments de création en communauté.">
+    <meta name="twitter:image" content="https://attimo-mada.com/assets/images/hero-placeholder.webp">
     <link rel="canonical" href="https://attimo-mada.com/">
     <title>Attimo - Ateliers Créatifs à Mahajanga | Madagascar</title>
     <!-- GSAP & ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js" defer></script>
     <!-- Playfair Display Font -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navigation principale">
         <div class="container">
-            <div class="logo">attimo.</div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active">Accueil</a></li>
+            <a href="index.html" class="logo" aria-label="Accueil Attimo">attimo.</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="active" aria-current="page">Accueil</a></li>
                 <li><a href="concept.html">Concept</a></li>
                 <li><a href="ateliers.html">Ateliers</a></li>
                 <li><a href="galerie.html">Galerie</a></li>
@@ -41,14 +54,14 @@
             <h1 class="hero-title">attimo.</h1>
             <p class="hero-subtitle">Votre moment suspendu</p>
             <p class="hero-description">Un espace pour créer de ses mains, ensemble. Des ateliers créatifs à Mahajanga pour des pauses que tu n'oublieras pas.</p>
-            <a href="contact.html" class="btn btn-primary">Créer avec attimo</a>
+            <a href="contact.html" class="btn btn-primary" data-track="cta_click" data-track-label="hero_creer_avec_attimo">Créer avec attimo</a>
         </div>
         <div class="hero-image">
-            <img src="assets/images/hero-placeholder.webp" alt="Espace attimo - Ateliers créatifs à Mahajanga">
+            <img src="assets/images/hero-placeholder.webp" alt="Espace attimo - Ateliers créatifs à Mahajanga" width="1200" height="900" decoding="async">
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- Section : Pourquoi attimo -->
         <section class="why-attimo">
             <div class="container">
@@ -72,13 +85,13 @@
                 <h2>Ateliers à venir</h2>
                 <div class="workshops-grid">
                     <article class="workshop-card">
-                        <img src="assets/images/workshop-1-placeholder.webp" alt="Atelier dessin et peinture">
+                        <img src="assets/images/workshop-1-placeholder.webp" alt="Atelier dessin et peinture" width="1200" height="900" loading="lazy" decoding="async">
                         <h3>Atelier Aquarelle Libre</h3>
                         <p class="workshop-date">22 avril 2026</p>
                         <a href="ateliers.html#aquarelle" class="btn btn-secondary">Réserver</a>
                     </article>
                     <article class="workshop-card">
-                        <img src="assets/images/workshop-2-placeholder.webp" alt="Atelier carterie créative">
+                        <img src="assets/images/workshop-2-placeholder.webp" alt="Atelier carterie créative" width="1200" height="900" loading="lazy" decoding="async">
                         <h3>Carterie Créative</h3>
                         <p class="workshop-date">25 avril 2026</p>
                         <a href="ateliers.html#carterie" class="btn btn-secondary">Réserver</a>
@@ -92,7 +105,7 @@
             <div class="container">
                 <h2>Prête à créer ?</h2>
                 <p>Les places sont limitées. Chaque moment chez attimo. est pensé pour qu'on puisse vraiment respirer ensemble.</p>
-                <a href="ateliers.html" class="btn btn-primary">Voir tous les ateliers</a>
+                <a href="ateliers.html" class="btn btn-primary" data-track="cta_click" data-track-label="final_voir_tous_les_ateliers">Voir tous les ateliers</a>
             </div>
         </section>
     </main>
@@ -133,6 +146,6 @@
         </div>
     </footer>
 
-    <script src="js/animations.js"></script>
+    <script src="js/animations.js" defer></script>
 </body>
 </html>
